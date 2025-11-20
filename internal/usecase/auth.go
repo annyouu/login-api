@@ -46,6 +46,7 @@ func (u *authUsecase) Register(username, password string) error {
 		Username: username,
 		PasswordHash: string(hash),
 	}
+	// テスト
 
 	// 永続化 (DBに保存する)
 	return u.userRepo.Create(user)
