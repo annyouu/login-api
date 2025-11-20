@@ -12,7 +12,7 @@ type JWTGeneratorImpl struct {
 	expireMinutes int
 }
 
-func NewJWTGenerator(secretKey string, expireMinutes int) usecase.JWTGenerator {
+func NewJWTGenerator(secretKey string, expireMinutes int) usecase.JWTGeneratorInterface {
 	return &JWTGeneratorImpl{
 		secretKey: secretKey,
 		expireMinutes: expireMinutes,

@@ -1,5 +1,5 @@
 package usecase
 
-type JWTGenerator interface {
+type JWTGeneratorInterface interface {
 	Generate(username string) (string, error)
 }

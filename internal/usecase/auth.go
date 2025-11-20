@@ -15,13 +15,13 @@ type AuthUsecaseInterface interface {
 }
 
 type authUsecase struct {
-	userRepo repository.UserRepository
-	jwtGenerator JWTGenerator
+	userRepo repository.UserRepositorInterface 
+	jwtGenerator JWTGeneratorInterface
 }
 
 func NewAuthUsecase(
-	userRepo repository.UserRepository,
-	jwtGen JWTGenerator,
+	userRepo repository.UserRepositorInterface ,
+	jwtGen JWTGeneratorInterface,
 ) AuthUsecaseInterface {
 	return &authUsecase{
 		userRepo: userRepo,
